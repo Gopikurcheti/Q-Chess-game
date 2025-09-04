@@ -435,53 +435,95 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .game-container {
-                grid-template-columns: 1fr 300px;
-                grid-template-rows: auto auto 1fr;
-            }
+@media (max-width: 1200px) {
+    .game-container {
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: auto auto 1fr;
+    }
 
-            .captured-pieces {
-                grid-column: 1 / -1;
-            }
-        }
+    .board-container {
+        margin-left: 0;
+    }
 
-        @media (max-width: 768px) {
-            .game-container {
-                grid-template-columns: 1fr;
-                padding: 10px;
-            }
+    .captured-pieces {
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+}
 
-            .header {
-                flex-direction: column;
-                gap: 15px;
-            }
+@media (max-width: 992px) {
+    .game-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
 
-            .square {
-                width: 45px;
-                height: 45px;
-            }
+    .board-container {
+        order: 2;
+        padding: 20px;
+    }
 
-            .piece {
-                font-size: 2rem;
-            }
-        }
+    .captured-pieces {
+        order: 3;
+        margin: 20px 0;
+    }
 
-        /* Scrollbar Styling */
-        .moves-list::-webkit-scrollbar {
-            width: 6px;
-        }
+    .move-history {
+        order: 4;
+    }
+}
 
-        .moves-list::-webkit-scrollbar-track {
-            background: var(--board-light);
-            border-radius: 3px;
-        }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 
-        .moves-list::-webkit-scrollbar-thumb {
-            background: var(--accent-primary);
-            border-radius: 3px;
-        }
+    .square {
+        width: 45px;
+        height: 45px;
+    }
 
-        .moves-list::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-secondary);
-        }
+    .piece {
+        font-size: 2rem;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    .board-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .square {
+        width: 38px;
+        height: 38px;
+    }
+
+    .piece {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .victory-title {
+        font-size: 2rem;
+    }
+}
+
