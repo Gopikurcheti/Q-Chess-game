@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Chess - Futuristic Board Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body data-theme="dark">
+    <div class="game-container">
+
+        
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">⚡ QUANTUM CHESS</div>
+            <div class="controls">
+                <button class="btn btn-secondary" id="newGameBtn">New Game</button>
+                <button class="btn btn-secondary" id="toggleModeBtn">vs AI</button>
+                <button class="btn btn-primary" id="undoBtn">Undo</button>
+                <button class="btn btn-primary" id="redoBtn">Redo</button>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+         <!-- Captured Pieces -->
+        <div class="captured-pieces">
+            <h3>Captured Pieces</h3>
+            <div class="captured-white">
+                <h4>White Lost</h4>
+                <div class="captured-list" id="capturedWhite"></div>
+            </div>
+            <div class="captured-black">
+                <h4>Black Lost</h4>
+                <div class="captured-list" id="capturedBlack"></div>
+            </div>
+        </div>
+
+        <!-- Board Container -->
+        <div class="board-container">
+            <div class="game-status">
+                <div class="current-player" id="currentPlayer">White to move</div>
+                <div class="game-mode" id="gameMode">Player vs Player</div>
+            </div>
+            <div class="chess-board" id="chessBoard"></div>
+        </div>
+
+        <!-- Move History -->
+        <div class="move-history">
+            <h3>Move History</h3>
+            <div class="moves-list" id="movesList"></div>
+            <div class="history-controls">
+                <button class="btn btn-secondary" id="clearHistoryBtn">Clear</button>
+                <button class="btn btn-secondary" id="exportBtn">Export</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="game-over-modal" id="gameOverModal">
+        <div class="modal-content">
+            <div class="victory-title" id="victoryTitle">CHECKMATE</div>
+            <div class="victory-subtitle" id="victorySubtitle">White Wins!</div>
+            <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
